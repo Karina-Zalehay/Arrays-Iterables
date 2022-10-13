@@ -30,3 +30,32 @@ console.log(listItems);
 
 const arrayListItems = Array.from(listItems);
 console.log(arrayListItems);
+
+const hobbies = ['Sports', 'Cooking'];
+hobbies.push('Reading'); //add el ih the end of the array
+hobbies.unshift('Coding') //add el in the beggining of the array
+hobbies.pop(); // remove the last el of the array
+hobbies.shift(); // remove first el of the array
+console.log(hobbies);
+
+//splice()
+
+hobbies[1] = 'Coding'; //replace element
+// hobbies[5] = 'Sewing'; //['Sports', 'Coding', empty × 3, 'Sewing'] rarely used 
+console.log(hobbies)
+
+hobbies.splice(1, 0, 'Good Food'); // negative indexes are allowed 
+console.log(hobbies);
+
+//slice
+
+const testResults = [1, 5.3, 1.5, 10.99, -5, 10];
+const storedResults = testResults.slice(0, 2);
+testResults.push(5.91);
+console.log(storedResults, testResults);
+
+// concat()
+const testResults = [1, 5.3, 1.5, 10.99, -5, 10];
+const storedResults = testResults.concat([3.99, 2])
+testResults.push(5.91);
+console.log(storedResults, testResults);
